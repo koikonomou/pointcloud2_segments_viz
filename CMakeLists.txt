@@ -25,4 +25,5 @@ include_directories(
 )
 
 add_executable(pointcloud2_segments_viz src/pointcloud2_segments_viz.cpp)
+add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(pointcloud2_segments_viz ${catkin_LIBRARIES} ${PCL_LIBRARIES})
